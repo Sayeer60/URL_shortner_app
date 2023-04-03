@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Shortener</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="wpage">
+        <h2>
+            Innomatics Research Labs
+        </h2>
+        <div class="container">
+            <h1>
+                URL Shortener
+            </h1>
+            <form action="{{ url_for('shorten') }}" method="post">
+                <input type="text" name="original_url" placeholder="Enter URL to shorten" style="width: 300px;height: 50px;">
+                <button type="submit">
+                    Shorten
+                </button>
+                <br>
+                <input type="reset" value="Clear" style="color: rgb(26, 25, 24);font-size: small;"/>
+            </form>
+        </div>
+        <div class="wrapper">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+</body>
+</html>
